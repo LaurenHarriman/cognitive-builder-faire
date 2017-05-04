@@ -21,8 +21,13 @@ def main():
     password=os.environ.get("TTS_PASSWORD"),
     x_watson_learning_opt_out=True)  # Optional flag
 
-  text = "Watson loves galvanize and Seattle"
+  #Customize the text using input from Terminal
+  text = input("What should I say? ")
   convert_to_audio(tts, text)
+
+  #Print in Terminal what Watson's going to say
+  print("Watson is going to say: '%s'" % text)
+
 
 if __name__ == '__main__':
   main()
